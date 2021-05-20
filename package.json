@@ -1,5 +1,5 @@
 {
-  "name": "cli-try",
+  "name": "a-fe-cli",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/main.js",
