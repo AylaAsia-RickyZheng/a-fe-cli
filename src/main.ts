@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const shell = require('shelljs');
 import { exit } from "process";
 import { getConfigUrl, getNewSettings, getSettings, setConfigUrl } from "./getSettings"
 import {runCmd} from './runCmd'
@@ -90,11 +91,11 @@ if (arg0 === '-h' || arg0 === '--help') {
               return
             }
             let dirname = matched[1]
-            console.log('进目录了 ', dirname)
+            console.log(`发现目录${dirname}了,准备去删 .git`)
             if (arg0 === '-o') {
               dirname = arg1
             }
-            runCmd(`rm -rf  ${dirname}/.git`)
+            shell.rm('-rf', `${dirname}/.git`)
           }).catch((e) => {
             console.log('error:', e)
           })
