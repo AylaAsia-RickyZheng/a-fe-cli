@@ -13,7 +13,7 @@ const arg1 = args[1] || ''
 
 if (arg0 === '-h' || arg0 === '--help') {
   console.log(`
-    acli [options]            选择并下载模版
+    a-cli [options]            选择并下载模版
           -h, --help          查看帮助
           -o [dirname]        将选中的模版拉到 [dirname] 对于的文件夹中
           --conf-show         显示配置文件地址
